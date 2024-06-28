@@ -115,12 +115,12 @@ module emu
 
 	//SDRAM interface with lower latency
 	output        SDRAM_CLK,
-	output        SDRAM_CKE,
+	//output        SDRAM_CKE,
 	output [12:0] SDRAM_A,
 	output  [1:0] SDRAM_BA,
 	inout  [15:0] SDRAM_DQ,
-	output        SDRAM_DQML,
-	output        SDRAM_DQMH,
+	//output        SDRAM_DQML,
+	//output        SDRAM_DQMH,
 	output        SDRAM_nCS,
 	output        SDRAM_nCAS,
 	output        SDRAM_nRAS,
@@ -158,7 +158,7 @@ module emu
 	input         OSD_STATUS
 );
 
-assign ADC_BUS  = 'Z;
+//assign ADC_BUS  = 'Z;
 
 assign AUDIO_S   = 0;
 assign AUDIO_L   = sample[15:0];
@@ -174,7 +174,7 @@ assign VGA_DISABLE = 0;
 
 assign VGA_F1 = 0;
 //assign {UART_RTS, UART_TXD, UART_DTR} = 0;
-assign {SD_SCK, SD_MOSI, SD_CS} = 'Z;
+//assign {SD_SCK, SD_MOSI, SD_CS} = 'Z;
 
 wire [1:0] ar       = status[19:18];
 wire       vcrop_en = status[5];
